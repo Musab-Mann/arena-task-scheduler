@@ -1,30 +1,30 @@
-# Arena Task Scheduler
+# Arena Task Scheduler ⚽
 
-**Sports Tournament-Based Operating System Simulation | C++17**
+**A C++17 console application demonstrating operating-system concepts through a football tournament simulation.**
 
-Arena Task Scheduler is a console-based C++ project that uses a football tournament scenario to demonstrate operating-system scheduling, synchronization, resource allocation, and memory-management concepts.
+Arena Task Scheduler combines a tournament-management scenario with educational demonstrations of CPU scheduling, synchronization, resource allocation, deadlock handling, and memory management.
 
-## Overview
+## 📌 Project Overview
 
-The project maps operating-system ideas to a tournament environment:
+The project maps familiar operating-system concepts to a tournament environment:
 
-- **Processes:** scheduled match fixtures or tasks
-- **Resources:** stadiums and shared tournament resources
-- **Scheduling:** deciding which task or match is handled next
+- **Tasks/processes:** match fixtures or scheduled activities
+- **Shared resources:** stadiums and tournament resources
+- **Scheduling:** choosing which task is handled next
 - **Resource conflicts:** competing requests for shared resources
 
-The simulation is intended for learning and demonstrating OS concepts. It is not a production operating-system scheduler.
+This is an educational simulation, not a production operating-system scheduler.
 
-## Features
+## ✨ Features
 
-### CPU scheduling
+### CPU Scheduling
 - First-Come, First-Served (FCFS)
 - Priority Scheduling
 - Round Robin
 - Shortest Job First (SJF)
 - Multi-Level Feedback Queue (MLFQ)
 
-### Operating-system concepts
+### Operating-System Concepts
 - Threading and synchronization demonstrations
 - Mutual exclusion and condition variables
 - Semaphore-related synchronization
@@ -33,81 +33,88 @@ The simulation is intended for learning and demonstrating OS concepts. It is not
 - LRU page-replacement simulation
 - Scheduling and performance reporting
 
-### Tournament simulation
-- Team, player, stadium, and match management
+### Tournament Management
+- Team, player, stadium, and match data
 - Tournament brackets and standings
 - Sponsor and ticket-related data
 - Match simulation and performance summaries
 - Saving and loading tournament data
-- AI-based match prediction feature
+- Match prediction feature
 
-> Feature availability and behavior depend on the current implementation in the source file. This repository is an educational simulation; verify individual algorithms and outputs when using it for coursework or demonstrations.
+> This repository is an educational simulation. Exact behavior and output depend on the current implementation in `main.cpp`; review and test individual algorithms before relying on their results.
 
-## Technologies
+## 🧰 Tech Stack
 
-- C++17
-- Standard C++ library, including threading, containers, algorithms, and file I/O
-- Git and GitHub
+- **Language:** C++17
+- **Concepts:** Operating systems, scheduling, synchronization, resource management, file I/O
+- **Tools:** GCC/MinGW-w64, Git, GitHub
 
-No third-party C++ libraries are required based on the current project setup.
+No third-party C++ libraries are required by the documented build setup.
 
-## Requirements
+## ⚙️ Requirements
 
 - A C++17-compatible compiler
-- On Linux, a compiler such as GCC and POSIX thread support
+- Linux: GCC with thread support
+- Windows: a recent MinGW-w64 GCC installation
 
-## Build and run
+## 🚀 Build and Run
 
-The main source file is main.cpp.
+The application source is `main.cpp`.
 
 ### Linux
 
-    g++ -std=c++17 -pthread main.cpp -o arena
-    ./arena
+```bash
+g++ -std=c++17 -pthread main.cpp -o arena
+./arena
+```
 
-### Windows
+### Windows (MinGW-w64)
 
-Use a C++17-compatible compiler such as a recent MinGW-w64 GCC build. From the project directory, run:
+```powershell
+g++ -std=c++17 -pthread main.cpp -o arena.exe
+.\arena.exe
+```
 
-    g++ -std=c++17 -pthread main.cpp -o arena.exe
-    arena.exe
+Run these commands from the repository directory. If compilation fails, check that your compiler supports C++17 and threading.
 
-If your compiler does not support the threading flags shown above, check the compiler's threading configuration.
+## 📂 Repository Structure
 
-## Runtime data
+```text
+arena-task-scheduler/
+├── README.md
+└── main.cpp
+```
 
-The application may create or use local data and report files, including:
+## 🗃️ Runtime Data
 
-- arena_db.txt
-- arena_log.txt
-- arena_report.txt
+The program may create or use local data and report files such as:
 
-Keep a backup of any data files you want to preserve before testing changes.
+- `arena_db.txt`
+- `arena_log.txt`
+- `arena_report.txt`
 
-## Suggested project walkthrough
+Back up any data files you need before testing or changing the program.
 
-1. Clone or download this repository.
-2. Compile the application using the instructions above.
-3. Run it and explore the available menu options.
-4. Compare the scheduling algorithms and their reported results.
-5. Inspect the source code to understand how resources and data are managed.
+## 🧭 Suggested Walkthrough
 
-## Repository structure
+1. Clone or download the repository.
+2. Compile the program with the command for your operating system.
+3. Run the application and explore its menu options.
+4. Compare the available scheduling algorithms and their reports.
+5. Review `main.cpp` to understand the implementation and data handling.
 
-    arena-task-scheduler/
-    ├── README.md
-    └── main.cpp
+## 🔧 Potential Next Improvements
 
-## Future improvements
+- Add screenshots or a short terminal demonstration
+- Include verified sample inputs and outputs for each scheduling algorithm
+- Add automated tests and edge-case validation
+- Split major components into separate source and header files
+- Document algorithm assumptions and known limitations
 
-- Add screenshots or a short terminal demo
-- Document sample inputs and outputs for each scheduling algorithm
-- Add automated test cases and edge-case validation
-- Separate major modules into smaller source and header files
-- Document known limitations and algorithm assumptions
-
-## Author
+## 👤 Author
 
 **Musab Hafeez Mann**
 
-[GitHub profile](https://github.com/Musab-Mann)
+- [GitHub Profile](https://github.com/Musab-Mann)
+- [Other Projects](https://github.com/Musab-Mann?tab=repositories)
+- [Savora Restaurant — Live Demo](https://musab-mann.github.io/Savora-Restaurant/)
