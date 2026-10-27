@@ -1,122 +1,113 @@
- Arena Task Scheduler
+# Arena Task Scheduler
 
-Sports Tournament-Based Operating System Simulation
+**Sports Tournament-Based Operating System Simulation | C++17**
 
-Arena Task Scheduler is a C++17 software simulation that connects Operating System concepts with football tournament management.
+Arena Task Scheduler is a console-based C++ project that uses a football tournament scenario to demonstrate operating-system scheduling, synchronization, resource allocation, and memory-management concepts.
 
-The project demonstrates OS concepts through a sports tournament environment:
+## Overview
 
-- Processes → Match Fixtures
-- CPUs → Stadium Venues
-- Schedulers → Tournament Scheduling
-- Resource Contention → Stadium Scheduling Conflicts
-- Deadlocks → Resource and Scheduling Conflicts
+The project maps operating-system ideas to a tournament environment:
 
- Project Objectives
+- **Processes:** scheduled match fixtures or tasks
+- **Resources:** stadiums and shared tournament resources
+- **Scheduling:** deciding which task or match is handled next
+- **Resource conflicts:** competing requests for shared resources
 
-The main objectives of this project are:
+The simulation is intended for learning and demonstrating OS concepts. It is not a production operating-system scheduler.
 
-- Demonstrate FCFS scheduling
-- Demonstrate Priority Scheduling
-- Demonstrate Round-Robin scheduling
-- Demonstrate Shortest Job First (SJF)
-- Demonstrate Multi-Level Feedback Queue (MLFQ)
-- Simulate resource allocation and deadlock detection
-- Demonstrate the Banker's Algorithm
-- Simulate memory management using LRU page replacement
-- Demonstrate thread synchronization
-- Provide tournament management with persistent data storage
-- Generate scheduling performance metrics
-- Provide an interactive console-based application
+## Features
 
- Features
+### CPU scheduling
+- First-Come, First-Served (FCFS)
+- Priority Scheduling
+- Round Robin
+- Shortest Job First (SJF)
+- Multi-Level Feedback Queue (MLFQ)
 
- CPU Scheduling
-
-The project implements five scheduling algorithms:
-
-1. First-Come First-Served (FCFS)
-2. Priority Scheduling
-3. Round-Robin (RR)
-4. Shortest Job First (SJF)
-5. Multi-Level Feedback Queue (MLFQ)
-
- Operating System Concepts
-
-The system demonstrates:
-
-- Process scheduling
-- Multithreading
-- Mutual exclusion
-- Condition variables
-- Semaphores
-- Deadlock detection
-- Deadlock recovery
+### Operating-system concepts
+- Threading and synchronization demonstrations
+- Mutual exclusion and condition variables
+- Semaphore-related synchronization
+- Deadlock detection and recovery demonstrations
 - Banker's Algorithm
-- Memory management
-- LRU page replacement
-- Shared-state communication
+- LRU page-replacement simulation
+- Scheduling and performance reporting
 
- Tournament Management
+### Tournament simulation
+- Team, player, stadium, and match management
+- Tournament brackets and standings
+- Sponsor and ticket-related data
+- Match simulation and performance summaries
+- Saving and loading tournament data
+- AI-based match prediction feature
 
-The application provides:
+> Feature availability and behavior depend on the current implementation in the source file. This repository is an educational simulation; verify individual algorithms and outputs when using it for coursework or demonstrations.
 
-- Team management
-- Player management
-- Stadium management
-- Match management
-- Sponsor management
-- Ticket management
-- Tournament bracket
-- Match simulation
-- Standings
-- Performance metrics
-- Analytics
-- AI match prediction
+## Technologies
 
- Persistence
+- C++17
+- Standard C++ library, including threading, containers, algorithms, and file I/O
+- Git and GitHub
 
-The system supports saving and loading tournament data.
+No third-party C++ libraries are required based on the current project setup.
 
-Runtime files include:
+## Requirements
+
+- A C++17-compatible compiler
+- On Linux, a compiler such as GCC and POSIX thread support
+
+## Build and run
+
+The main source file is main.cpp.
+
+### Linux
+
+    g++ -std=c++17 -pthread main.cpp -o arena
+    ./arena
+
+### Windows
+
+Use a C++17-compatible compiler such as a recent MinGW-w64 GCC build. From the project directory, run:
+
+    g++ -std=c++17 -pthread main.cpp -o arena.exe
+    arena.exe
+
+If your compiler does not support the threading flags shown above, check the compiler's threading configuration.
+
+## Runtime data
+
+The application may create or use local data and report files, including:
 
 - arena_db.txt
 - arena_log.txt
 - arena_report.txt
 
-## Technologies Used
+Keep a backup of any data files you want to preserve before testing changes.
 
-The project is implemented using standard C++17.
+## Suggested project walkthrough
 
-Main technologies and libraries include:
+1. Clone or download this repository.
+2. Compile the application using the instructions above.
+3. Run it and explore the available menu options.
+4. Compare the scheduling algorithms and their reported results.
+5. Inspect the source code to understand how resources and data are managed.
 
-- C++17
-- std::thread
-- std::mutex
-- std::condition_variable
-- std::atomic
-- std::chrono
-- std::random
-- std::map
-- std::vector
-- std::queue
-- std::deque
-- std::algorithm
-- std::fstream
-- std::sstream
+## Repository structure
 
-No external libraries are required.
+    arena-task-scheduler/
+    ├── README.md
+    └── main.cpp
 
- Requirements
+## Future improvements
 
-- C++17 compatible compiler
-- g++ 7 or later
-- Linux or Linux-compatible environment
-- POSIX thread support
+- Add screenshots or a short terminal demo
+- Document sample inputs and outputs for each scheduling algorithm
+- Add automated test cases and edge-case validation
+- Separate major modules into smaller source and header files
+- Document known limitations and algorithm assumptions
 
-## Compilation
+## Author
 
-Compile the project using:
+**Musab Hafeez Mann**
 
-bash
-g++ -std=c++17 -pthread main.cpp -o arena
+[GitHub profile](https://github.com/Musab-Mann)
